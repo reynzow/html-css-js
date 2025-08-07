@@ -1,5 +1,6 @@
 body {
     scroll-behavior: smooth;
+    background-color: #ffe4cd !important;
 }
 .card:hover {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -11,4 +12,7 @@ body {
 }
 .project-title:hover {
     text-decoration: underline;
+}
+#portfolio {
+    font-family: 'Roboto', Arial, sans-serif;
 }
