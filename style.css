@@ -1,14 +1,47 @@
 body {
     scroll-behavior: smooth;
-    background-color: #ffe4cd !important;
+    background-color: #ffffff !important;
+}
+
+#intro h1 {
+    font-family: 'Playfair Display', cursive, serif;
+    font-style: italic;
+    font-weight: 700;
+}
+.projects-heading {
+    font-family: 'Copperplate Gothic', 'Copperplate', 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.color-section {
+    width: 20px;
+    height: 24px;
+    border-radius: 4px;
+    background: #f8d7da;
+    transition: background 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+.contact-link {
+    color: #000 !important;
+    text-decoration: none;
+}
+.contact-link:hover {
+    color: #333 !important;
+    text-decoration: underline;
 }
 .card:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0.2);
     transition: 0.3s;
 }
 .project-title {
     cursor: pointer;
-    color: #007bff;
+    color: #000000;
 }
 .project-title:hover {
     text-decoration: underline;

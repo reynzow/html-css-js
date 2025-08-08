@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Play
     <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -10,6 +11,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <body>
+<section id="intro" class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh; background: #f0f8ff;">
+    <h1 class="mb-3">Welcome to My Portfolio</h1>
+    <p class="mb-4">Discover my projects and skills below.</p>
+    <button id="startBtn" class="btn btn-dark btn-lg">Start</button>
+</section>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -20,14 +27,14 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="contactNav">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <section id="portfolio" class="container my-5">
-    <h2 class="text-center mb-4">My Projects</h2>
+    <h2 class="text-center mb-4 projects-heading">MY PROJECTS</h2>
     <div class="row">
         <!-- Project 1 -->
 
@@ -37,7 +44,7 @@
                 <div class="card-body">
                     <h5 class="card-title project-title">Takbo Lipa</h5>
                     <p class="card-text">A prototype UI design for an app that has real-time monitoring & reporting system for Lipa traffic.</p>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">More Info</button>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project1Modal">More Info</button>
                 </div>
             </div>
         </div>
@@ -47,9 +54,10 @@
             <div class="card">
                 <img src="images/RecipeNest.png" class="card-img-top" alt="Recipe Nest">
                 <div class="card-body">
-                    <h5 class="card-title project-title">Recipe Nest </h5>
-                    <p class="card-text">A protoype for a cooking-based AI powered web-app designed to help users generated recipes and improve cooking skills.</p>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">More Info</button>
+                    <h5 class="card-title project-title">RecipeNest</h5>
+                    </h5>
+                    <p class="card-text">A protoype for a cooking-based web-app designed to generate recipes and improve cooking skills.</p>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project2Modal">More Info</button>
                 </div>
             </div>
         </div>
@@ -59,9 +67,10 @@
             <div class="card">
                 <img src="images/student%20enrollment%20system.png" class="card-img-top" alt="Student Enrollment System">
                 <div class="card-body">
-                    <h5 class="card-title project-title">Student Enrollment System </h5>
+                    <h5 class="card-title project-title">Student Enrollment System</h5>
+                    </h5>
                     <p class="card-text"> A simple PHP-based web project for Infoman: a student enrollment system that allows you to manage students, courses, and class lists efficiently.</p>
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">More Info</button>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project3Modal">More Info</button>
                 </div>
             </div>
         </div>
@@ -114,8 +123,8 @@
 
 </section>
 
-<section id="contact" class="container my-5">
-    <h2 class="text-center mb-4">Contact Me</h2>
+<section id="contact" class="container my-5" style="display:none;">
+    <h2 class="text-center mb-4"><a href="#" id="contactMeLink">Contact Me</a></h2>
     <form onsubmit="handleSubmit(event)">
         <div class="mb-3">
             <label for="name" class="form-label">Name*</label>
@@ -129,7 +138,7 @@
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control" id="message" rows="4"placeholder="Message is optional"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Send</button>
+        <button type="submit" class="btn btn-dark">Send</button>
     </form>
 </section>
 

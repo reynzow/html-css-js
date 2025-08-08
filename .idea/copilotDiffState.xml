@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/components/ContactForm.tsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/components/ContactForm.tsx" />
+              <option name="updatedContent" value="// ...existing code...&#10;const handleSubmit = async (e: React.FormEvent) =&gt; {&#10;  e.preventDefault();&#10;  // ...existing code for sending contact form...&#10;  // After successful submission:&#10;  window.scrollTo({ top: 0, behavior: 'smooth' });&#10;  // ...existing code...&#10;};&#10;// ...existing code...&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

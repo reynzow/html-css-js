@@ -1,18 +1,35 @@
 function handleSubmit(event) {
     event.preventDefault();
     alert("Thank you for your message!");
+    document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" });
 }
+
 
 function highlightPortfolio() {
     document.getElementById("portfolio").style.backgroundColor = "#f0f8ff";
 }
 
+document.getElementById('startBtn').addEventListener('click', function() {
+    document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+});
+
 document.querySelectorAll('.project-title').forEach((title) => {
-    title.dataset.clickCount = 0;
-    title.addEventListener('click', () => {
-        const colors = ['#f8d7da', '#d1e7dd', '#cff4fc', '#fff3cd', '#e0cffc', '#fce0f5'];
-        title.dataset.clickCount = Number(title.dataset.clickCount) + 1;
-        const colorIdx = title.dataset.clickCount % colors.length;
-        document.getElementById('portfolio').style.backgroundColor = colors[colorIdx];
+    const colors = ['#f8d7da', '#d1e7dd', '#cff4fc'];
+    let clickCount = 0;
+    title.addEventListener('click', (e) => {
+        clickCount++;
+        const colorIdx = clickCount % colors.length;
+        title.closest('.card').style.backgroundColor = colors[colorIdx];
     });
+});
+
+document.getElementById('contactNav').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contact').style.display = 'block';
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('contactMeLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contact').style.display = 'block';
 });
