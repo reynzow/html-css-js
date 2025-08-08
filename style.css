@@ -3,6 +3,20 @@ body {
     background-color: #ffffff !important;
 }
 
+#startBtn {
+    transition: background 0.3s, transform 0.2s;
+    background: #212529;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5em 1.2em;
+    border-radius: 8px;
+}
+
+#startBtn:hover {
+    background: #910808;
+    transform: scale(1.2);
+    color: #fff;
+}
 #intro h1 {
     font-family: 'Playfair Display', cursive, serif;
     font-style: italic;
@@ -48,4 +62,29 @@ body {
 }
 #portfolio {
     font-family: 'Roboto', Arial, sans-serif;
+}
+
+.highlight-portfolio {
+    box-shadow: 0 0 30px 10px #17a2b8;
+    transition: box-shadow 0.6s;
+}
+
+.contact-fade-out {
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.get-in-touch-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.get-in-touch-heading a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+.get-in-touch-heading a:hover {
+    color: #333 !important;
+    text-decoration: none !important;
 }
