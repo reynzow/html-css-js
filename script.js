@@ -44,7 +44,7 @@ document.getElementById('startBtn').addEventListener('click', function() {
 });
 
 document.querySelectorAll('.project-title').forEach((title) => {
-    const colors = ['#ff0014','#ff6b00', '#03cf73', '#0064fb', 'ffde21'];
+    const colors = ['#ed1226','#fbdd00', '#03cf73', '#0064fb' ];
     let clickCount = 0;
     title.addEventListener('click', (e) => {
         clickCount++;

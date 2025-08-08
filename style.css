@@ -1,6 +1,19 @@
 body {
     scroll-behavior: smooth;
     background-color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 576px) {
+    #intro h1 {
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+    #intro p {
+        text-align: center;
+        padding: 0 10px;
+    }
 }
 
 #startBtn {
@@ -10,17 +23,63 @@ body {
     font-size: 1.1rem;
     padding: 0.5em 1.2em;
     border-radius: 8px;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0,0,0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(0,0,0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,0,0, 0); }
 }
 
 #startBtn:hover {
-    background: #910808;
+    background: #000000;
     transform: scale(1.2);
     color: #fff;
 }
+
 #intro h1 {
-    font-family: 'Playfair Display', cursive, serif;
-    font-style: italic;
-    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+#intro {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    animation: gradientShift 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.arrow {
+    font-size: 2rem;
+    color: #212529;
+
+}
+.bounce {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+#intro h1, #intro p, #startBtn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+#intro h1 { animation-delay: 0.3s; }
+#intro p { animation-delay: 0.6s; }
+#startBtn { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .projects-heading {
     font-family: 'Copperplate Gothic', 'Copperplate', 'Times New Roman', serif;
@@ -32,15 +91,7 @@ body {
     align-items: center;
     gap: 8px;
 }
-.color-section {
-    width: 20px;
-    height: 24px;
-    border-radius: 4px;
-    background: #f8d7da;
-    transition: background 0.3s;
-    cursor: pointer;
-    display: inline-block;
-}
+
 .contact-link {
     color: #000 !important;
     text-decoration: none;
